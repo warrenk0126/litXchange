@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import styled from 'styled-components';
 import HomePage from './pages/HomePage';
 import ProfilePage from './pages/ProfilePage';
 import LoginPage from './pages/LoginPage';
@@ -10,13 +11,20 @@ import CreateBook from './components/CreateBook/CreateBook';
 import CreateTrade from './components/CreateTrade/CreateTrade';
 import EditBook from './components/EditBook/EditBook';
 import EditTrade from './components/EditTrade/EditTrade';
+import TradeMatches from './components/TradeMatches/TradeMatches';
 import Navbar from './components/Navbar/Navbar';
+
+const Container = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+`;
 
 function App() {
   return (
     <Router>
       <Navbar />
-      <div>
+      <Container>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/profile" component={ProfilePage} />
         <Route exact path="/login" component={LoginPage} />
@@ -27,7 +35,8 @@ function App() {
         <Route exact path="/create-trade" component={CreateTrade} />
         <Route exact path="/edit-book/:id" component={EditBook} />
         <Route exact path="/edit-trade/:id" component={EditTrade} />
-      </div>
+        <Route exact path="/trade-matches" component={TradeMatches} />
+      </Container>
     </Router>
   );
 }

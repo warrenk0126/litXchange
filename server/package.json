@@ -1,0 +1,27 @@
+{
+    "name": "litXchange",
+    "version": "0.1",
+    "description": "LitXchange is a platform where users can trade books with each other. It uses React for the front end, GraphQL with a Node.js and Express.js server, and MongoDB and the Mongoose ODM for the database.",
+    "main": "src/server.js",
+    "scripts": {
+      "start": "node src/server.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/warrenk0126/litXchange.git"
+    },
+    "author": "Group 5",
+    "bugs": {
+      "url": "https://github.com/warrenk0126/litXchange/issues"
+    },
+    "homepage": "https://github.com/warrenk0126/litXchange",
+    "dependencies": {
+      "express": "^4.17.1",
+      "apollo-server-express": "^2.25.2",
+      "graphql": "^15.5.0",
+      "mongoose": "^5.12.3",
+      "jsonwebtoken": "^8.5.1",
+      "bcryptjs": "^2.4.3"
+    }
+}

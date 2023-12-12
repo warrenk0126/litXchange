@@ -1,10 +1,12 @@
 const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
-// Import your typeDefs and resolvers here
+const typeDefs = require('./schemas/typeDefs');
+const resolvers = require('./resolvers');
 
 const app = express();
 const server = new ApolloServer({
-  // Add your typeDefs and resolvers here
+  typeDefs,
+  resolvers
 });
 
 server.applyMiddleware({ app });

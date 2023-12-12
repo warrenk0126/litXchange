@@ -22,7 +22,8 @@ function BookList() {
   if (error) return <p>Error :(</p>;
 
   return data.books.map((book) => (
-    <Book key={book.bookId} book={book} />
+    <Book key={book.bookId} book={book} 
+    author={book.authors} description={book.description} title={book.title} image={book.image} link={book.link}/>
   ));
 }
 

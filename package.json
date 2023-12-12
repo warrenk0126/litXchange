@@ -4,6 +4,7 @@
     "bcryptjs": "^2.4.3",
     "graphql": "^16.8.1",
     "jsonwebtoken": "^9.0.2",
+    "react-scripts": "^3.0.1",
     "styled-components": "^6.1.1"
   }
 }

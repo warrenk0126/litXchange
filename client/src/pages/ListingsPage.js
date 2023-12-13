@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useMutation, gql } from '@apollo/client';
 import { ListGroup } from 'react-bootstrap';
-
+import './UserProfile.css';
 
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -10,7 +10,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 
 
 
-const BookList = ({ books }) => {
+<>const BookList = ({ books }) => {
   return (
     <ListGroup>
       {books.map((book, index) => (
@@ -22,6 +22,7 @@ const BookList = ({ books }) => {
     </ListGroup>
   );
 };
+</>
 
 export default BookList;
    

@@ -7,19 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // Bootstrap Bundle JS
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
-//psuedo code of the solution
 
-
-//<React.Fragment> {
-   // <>
-   // <booklist />
-   // <button onClick={() => addBook()}>Add Book</button>
-   // <button onClick={() => deleteBook()}>Delete Book</button>
-   // <button onClick={() => updateBook()}>Update Book</button></>
-}
-// </React.Fragment>
-
-/////////////////////////////
 
 const BookList = ({ books }) => {
     return (

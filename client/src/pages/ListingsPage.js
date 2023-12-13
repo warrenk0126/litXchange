@@ -10,22 +10,6 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 
 
 
-<>const BookList = ({ books }) => {
-  return (
-    <ListGroup>
-      {books.map((book, index) => (
-        <ListGroup.Item key={index}>
-          <h2>{book.title}</h2>
-          <p>{book.author}</p>
-        </ListGroup.Item>
-      ))}
-    </ListGroup>
-  );
-};
-</>
-
-export default BookList;
-   
 const addBook = () => {
     // Add a new book to the books array
    };

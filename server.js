@@ -1,10 +1,10 @@
 require('dotenv').config()
 const express = require('express');
 const { graphqlHTTP } = require('express-graphql');
-const schema = require('./Schema');
+const schema = require('./server/Schema');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const jwt = require('jsonwebtoken');
-const User = require('./User');
+const User = require('./server/User');
 const mongoose = require('mongoose');
 
 const app = express();

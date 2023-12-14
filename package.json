@@ -25,6 +25,7 @@
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.3.0",
     "mongoose": "^8.0.3",
+    "react-router-dom": "^6.21.0",
     "react-scripts": "^5.0.1",
     "stripe": "^14.8.0"
   },

@@ -33,6 +33,16 @@ function Home() {
   return (
     <div>
       <h1>Book List</h1>
+      <h2>How to Use</h2>
+        <p> 
+          <ul>
+            <li>Find all of the books you own</li>
+            <li>Explore the books that you'd like to add to your own library</li>
+            <li>Trade books with other users</li>
+            <li>View statistics about your library</li>
+            <li>Happy Reading!</li>
+          </ul>
+        </p>
       <Link to="/add" className="btn btn-primary mb-3">
         Add Book
       </Link>
@@ -123,13 +133,3 @@ function Home() {
 export default Home;
 
 
-<h2>How to Use</h2>
-<p> 
-  <ul>
-    <li>Find all of the books you own</li>
-    <li>Explore the books that you'd like to add to your own library</li>
-    <li>Trade books with other users</li>
-    <li>View statistics about your library</li>
-    <li>Happy Reading!</li>
-  </ul>
-</p>

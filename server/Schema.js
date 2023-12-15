@@ -10,8 +10,8 @@ const mongoose = require('mongoose');
 const User = require('./User');
 const Book = require('./Book');
 const Trade = require('./Trade');
-const Message = require('../Message');
-const Review = require('../Review');
+const Message = require('./Message');
+const Review = require('./Review');
 
 const UserType = new GraphQLObjectType({
   name: 'User',

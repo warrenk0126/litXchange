@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { ApolloProvider } from '@apollo/client';
 import client from './apolloClient';
 import UserContext from './UserContext';
@@ -9,7 +9,7 @@ import Profile from './components/Profile';
 import Trades from './components/Trades';
 import Donations from './components/Donations';
 import Login from './components/Login';
-import SignUp from './components/SignUp';
+import Signup from './components/Signup';
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -25,26 +25,14 @@ const App = () => {
         <Router>
           <Navbar />
           <button onClick={logout}>Log Out</button>
-          <Switch>
-            <Route path="/login">
-              {user ? <Redirect to="/" /> : <Login />}
-            </Route>
-            <Route path="/signup">
-              {user ? <Redirect to="/" /> : <SignUp />}
-            </Route>
-            <Route path="/profile/:id">
-              {!user ? <Redirect to="/login" /> : <Profile />}
-            </Route>
-            <Route path="/trades">
-              {!user ? <Redirect to="/login" /> : <Trades />}
-            </Route>
-            <Route path="/donations">
-              {!user ? <Redirect to="/login" /> : <Donations />}
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
+          <Routes>
+            <Route path="/login" element={user ? <Navigate to="/" /> : <Login />} />
+            <Route path="/signup" element={user ? <Navigate to="/" /> : <Signup />} />
+            <Route path="/profile/:id" element={!user ? <Navigate to="/login" /> : <Profile />} />
+            <Route path="/trades" element={!user ? <Navigate to="/login" /> : <Trades />} />
+            <Route path="/donations" element={!user ? <Navigate to="/login" /> : <Donations />} />
+            <Route path="/" element={<Home />} />
+          </Routes>
         </Router>
       </UserContext.Provider>
     </ApolloProvider>

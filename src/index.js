@@ -1,19 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloProvider } from '@apollo/client';
 import App from './App';
 import client from './apolloClient';
-import SignUp from './components/SignUp'; // Import the SignUp component
+import Signup from './components/Signup';
 
 ReactDOM.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
       <Router>
-        <Switch>
-          <Route path="/signup" component={SignUp} /> {/* Add a route for SignUp */}
-          <Route path="/" component={App} />
-        </Switch>
+        <Routes>
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/*" element={<App />} />
+        </Routes>
       </Router>
     </ApolloProvider>
   </React.StrictMode>,

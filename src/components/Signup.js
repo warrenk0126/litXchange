@@ -4,7 +4,7 @@ import UserContext from '../UserContext';
 import { Form, Input, Button } from 'antd';
 
 const SIGN_UP = gql`
-  mutation SignUp($username: String!, $email: String!, $password: String!) {
+  mutation Signup($username: String!, $email: String!, $password: String!) {
     addUser(username: $username, email: $email, password: $password) {
       id
       username
@@ -13,7 +13,7 @@ const SIGN_UP = gql`
   }
 `;
 
-const SignUp = () => {
+const Signup = () => {
   const { setUser } = useContext(UserContext);
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -89,4 +89,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default Signup;
